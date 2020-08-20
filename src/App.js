@@ -21,9 +21,9 @@ class App extends Component {
 
   // The add and remove functions should update the state's cart and the total.
   // The add function has been built already. The remove function has not.
-  addToShoppingCart = (item) => {
+  addToShoppingCart = (name, price) => {
     this.setState(state => {
-      state.cart.push(item)
+      state.cart = [...state.cart, {name: name,price: price}]
       return state
     })
   }
@@ -36,7 +36,7 @@ class App extends Component {
         <Hero/>
         <ShoppingCart />
         <div className="main">
-          <ProductList inventory={this.inventory}/>
+          <ProductList inventory={this.inventory} add={this.addToShoppingCart}/>
         </div>
       </div>
     );

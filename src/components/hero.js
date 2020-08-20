@@ -4,7 +4,7 @@ import './hero.css';
 function Hero() {
   return (
     <div className="Hero">
-      <h1>Foodster</h1>
+      <h1>Shanes's Food store</h1>
     </div>
   );
 }

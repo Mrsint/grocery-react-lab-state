@@ -3,10 +3,10 @@ import React from 'react';
 function Product(props) {
   return (
     <div className="Product" >
-      <h2>NAME</h2>
-      <h3>$$PRICE</h3>
+      <h2>{props.name}</h2>
+      <h3>{props.price}</h3>
       <div className="buttons">
-        <button onClick={()=>{console.log("add button test")}}>Add</button>
+        <button onClick={()=>{props.add(props.name, props.price)}}>Add</button>
         <button>Remove</button>
       </div>
     </div>
